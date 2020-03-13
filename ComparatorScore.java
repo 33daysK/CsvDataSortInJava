@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
-/* �\�[�g���s�̂��߂̔�r�����̃��\�b�h
- * �X�R�A��
+/* ソート実行のための比較部分のメソッド
+ * スコア編
  * 
  */
 public class ComparatorScore implements Comparator<Student>{

@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-/* CSVƒtƒ@ƒCƒ‹‚Åo—Í‚·‚éƒƒ\ƒbƒh
+/* CSVãƒ•ã‚¡ã‚¤ãƒ«ã‚’å‡ºåŠ›ã™ã‚‹ãƒ¡ã‚½ãƒƒãƒ‰
  * 
  */
 public class Write{
@@ -21,11 +21,12 @@ public class Write{
                 }
                 
         }catch(Exception e){
-            // ƒGƒ‰[‚Ìˆµ‚¢‚ª³’¼‚í‚©‚Á‚Ä‚È‚¢
+            // ã‚¨ãƒ©ãƒ¼ã®æ‰±ã„ãŒæ­£ç›´ã‚ã‹ã£ã¦ãªã„
             e.printStackTrace();
         }
         
     }
 }
+
 
 
