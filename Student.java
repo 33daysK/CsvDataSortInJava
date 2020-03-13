@@ -1,5 +1,5 @@
 /*
- * StudentƒNƒ‰ƒX‚Ì’è‹`
+ * Studentã‚¯ãƒ©ã‚¹ã®å®šç¾©
  * 
  */
 public class Student{
@@ -9,7 +9,7 @@ public class Student{
     private int age;
     private int score;
     final String FORMAT_NUMBER = "%-8s";
-    final String FORMAT_OTHER = "%-5s %3dÎ %4d“_";
+    final String FORMAT_OTHER = "%-5s %3dæ­³ %4dç‚¹";
     
     public String getNumber(){
         return this.number;
@@ -42,8 +42,8 @@ public class Student{
     public void setScore(int s){
         this.score = s;
     }
-    // “ú–{Œê‚ª¬‚¶‚é‚ÆƒtƒH[ƒ}ƒbƒg‚Å‚«‚È‚¢‚½‚ß‘Îô‚Ìƒƒ\ƒbƒh
-    // ‹ó”’‚ğ•¶š”•ªã‰º‚³‚¹‚Ä‹zû‚µ‚Ä‚¢‚Ü‚·
+    // æ—¥æœ¬èªãŒæ··ã˜ã‚‹ã¨ãƒ•ã‚©ãƒ¼ãƒãƒƒãƒˆã§ããªã„ãŸã‚å¯¾ç­–ã®ãƒ¡ã‚½ãƒƒãƒ‰
+    // ç©ºç™½ã‚’æ–‡å­—æ•°åˆ†ä¸Šä¸‹ã•ã›ã¦å¸åã—ã¦ã„ã¾ã™
     private static String formatName(String nihongo, int length){
         int nameLength = nihongo.length();
         return String.format("%-"+(length-nameLength)+"s", nihongo);
@@ -52,12 +52,10 @@ public class Student{
     public String toString(){
         String formatstr = String.format(FORMAT_NUMBER, this.number);
         
-        // –¼‘O‘Îô
+        // åå‰å¯¾ç­–
         formatstr += formatName(this.name, 22);
         
         formatstr += String.format(FORMAT_OTHER, this.team, this.age, this.score);
         return formatstr;
     }
 }
-
-

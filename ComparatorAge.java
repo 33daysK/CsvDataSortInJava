@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
-/* �\�[�g���s�̂��߂̔�r�����̃��\�b�h
- * �N���
+/* ソート実行のための比較部分のメソッド
+ * 年齢編
  * 
  */
 public class ComparatorAge implements Comparator<Student>{

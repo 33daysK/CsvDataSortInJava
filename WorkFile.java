@@ -1,8 +1,8 @@
 import java.io.*;
 import java.util.*;
 
-/* CSVƒtƒ@ƒCƒ‹‚Ì“Ç‚İ‚İ‚Æ‘‚«o‚µ‚ğs‚¤ƒNƒ‰ƒX
- * ƒ\[ƒg•”•ª‚Íwriteƒƒ\ƒbƒh‚Ì’†‚É‚ ‚è‚Ü‚·B
+/* CSVãƒ•ã‚¡ã‚¤ãƒ«ã®èª­ã¿è¾¼ã¿ã¨æ›¸ãå‡ºã—ã‚’è¡Œã†ã‚¯ãƒ©ã‚¹
+ * ã‚½ãƒ¼ãƒˆéƒ¨åˆ†ã¯writeãƒ¡ã‚½ãƒƒãƒ‰ã®ä¸­ã«ã‚ã‚Šã¾ã™ã€‚
  * 
  */
 public class WorkFile{
@@ -23,13 +23,13 @@ public class WorkFile{
                 john.setAge(Integer.parseInt(st.nextToken(",")));
                 john.setScore(Integer.parseInt(st.nextToken(",")));
                 
-                // List‚É’Ç‰Á
+                // Listã«è¿½åŠ 
                 studentList.add(john);
             }
             
             
         }catch(Exception e){
-            // ƒGƒ‰[‚Ìˆµ‚¢‚ª³’¼‚í‚©‚Á‚Ä‚È‚¢
+            // ã‚¨ãƒ©ãƒ¼ã®æ‰±ã„ãŒæ­£ç›´ã‚ã‹ã£ã¦ãªã„
             e.printStackTrace();
         }
         
@@ -43,10 +43,10 @@ public class WorkFile{
         switch(selectItem){
         case 0:
             Collections.sort(studentList, new ComparatorNumber());
-            fileName = "”Ô†¸‡";
+            fileName = "ç•ªå·æ˜‡é †";
             if(!(trueAscending)){
                 Collections.reverse(studentList);
-                fileName = "”Ô†~‡";
+                fileName = "ç•ªå·é™é †";
             }
             for (Student s : studentList) {
                 System.out.println(s);
@@ -54,10 +54,10 @@ public class WorkFile{
             break;
         case 1:
             Collections.sort(studentList, new ComparatorTeam());
-            fileName = "ƒNƒ‰ƒX¸‡";
+            fileName = "ã‚¯ãƒ©ã‚¹æ˜‡é †";
             if(!(trueAscending)){
                 Collections.reverse(studentList);
-                fileName = "ƒNƒ‰ƒX~‡";
+                fileName = "ã‚¯ãƒ©ã‚¹é™é †";
             }
             for (Student s : studentList) {
                 System.out.println(s);
@@ -65,10 +65,10 @@ public class WorkFile{
             break;
         case 2:
             Collections.sort(studentList, new ComparatorAge());
-            fileName = "”N—î¸‡";
+            fileName = "å¹´é½¢æ˜‡é †";
             if(!(trueAscending)){
                 Collections.reverse(studentList);
-                fileName = "”N—î~‡";
+                fileName = "å¹´é½¢é™é †";
             }
             for (Student s : studentList) {
                 System.out.println(s);
@@ -76,10 +76,10 @@ public class WorkFile{
             break;
         default:
             Collections.sort(studentList, new ComparatorScore());
-            fileName = "”N—î¸‡";
+            fileName = "å¹´é½¢æ˜‡é †";
             if(!(trueAscending)){
                 Collections.reverse(studentList);
-                fileName = "”N—î~‡";
+                fileName = "å¹´é½¢é™é †";
             }
             for (Student s : studentList) {
                 System.out.println(s);

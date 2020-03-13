@@ -1,5 +1,5 @@
-/*  ƒ†[ƒU‚ª‘I‚ñ‚¾€–Ú‚Æí•Ê‚Åƒ\[ƒg‚·‚éƒvƒƒOƒ‰ƒ€B
- *  ƒƒCƒ“•”•ª‚Í‚È‚é‚×‚­ŠÈŒ‰‚É‚µ‚Ü‚µ‚½
+/*  ãƒ¦ãƒ¼ã‚¶ãŒé¸ã‚“ã é …ç›®ã¨ç¨®åˆ¥ã§ã‚½ãƒ¼ãƒˆã™ã‚‹ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã€‚
+ *  ãƒ¡ã‚¤ãƒ³éƒ¨åˆ†ã¯ãªã‚‹ã¹ãç°¡æ½”ã«ã—ã¾ã—ãŸ
  *  
  */
 import java.util.List;
@@ -12,20 +12,20 @@ public class CsvSort{
 			Option.output(choice);
 		}
 		
-		//  €–Ú‚ğ’Ç‰Á‚µ‚½‚çInput‚ÆMake‚ğ•ÏX‚·‚é‚±‚Æ
-		System.out.println("•À‚×‘Ö‚¦‚½‚¢€–Ú‚Í‰½‚Å‚·‚©H");
-		System.out.print("[0:”Ô† 1:ƒNƒ‰ƒX 2:”N—î 3:“_”] > ");
+		//  é …ç›®ã‚’è¿½åŠ ã—ãŸã‚‰Inputã¨Makeã‚’å¤‰æ›´ã™ã‚‹ã“ã¨
+		System.out.println("ä¸¦ã¹æ›¿ãˆãŸã„é …ç›®ã¯ä½•ã§ã™ã‹ï¼Ÿ");
+		System.out.print("[0:ç•ªå· 1:ã‚¯ãƒ©ã‚¹ 2:å¹´é½¢ 3:ç‚¹æ•°] > ");
 		int selectItem = Input.checkInt(3);
 
-		//  €–Ú‚ğ’Ç‰Á‚µ‚½‚çInput‚ÆMake‚ğ•ÏX‚·‚é‚±‚Æ
-		System.out.println("•À‚×‘Ö‚¦í•Ê‚ğw’è‚µ‚Ä‚­‚¾‚³‚¢");
-		System.out.print("[0:¸‡ 1:~‡] > ");
+		//  é …ç›®ã‚’è¿½åŠ ã—ãŸã‚‰Inputã¨Makeã‚’å¤‰æ›´ã™ã‚‹ã“ã¨
+		System.out.println("ä¸¦ã¹æ›¿ãˆç¨®åˆ¥ã‚’æŒ‡å®šã—ã¦ãã ã•ã„");
+		System.out.print("[0:æ˜‡é † 1:é™é †] > ");
 		boolean trueAscending = Input.checkBoolean();
 		
-		// “Ç‚İæ‚Á‚½î•ñ‚ğŒ³‚ÉStudentŒ^‚ÌƒŠƒXƒg‚ğì¬‚·‚éB
-		// ƒ\[ƒg‚Íwrite()‚Ì’†‚Ås‚Á‚Ä‚¢‚é
+		// èª­ã¿å–ã£ãŸæƒ…å ±ã‚’å…ƒã«Studentå‹ã®ãƒªã‚¹ãƒˆã‚’ä½œæˆã™ã‚‹ã€‚
+		// ã‚½ãƒ¼ãƒˆã¯write()ã®ä¸­ã§è¡Œã£ã¦ã„ã‚‹
 		List<Student> studentList = WorkFile.read();
-	    System.out.println(" ”Ô†     –¼‘O             ƒNƒ‰ƒX   ”N—î   “_”");
+	    System.out.println(" ç•ªå·     åå‰             ã‚¯ãƒ©ã‚¹   å¹´é½¢   ç‚¹æ•°");
 		WorkFile.write(selectItem,trueAscending,studentList);
 		
 	}

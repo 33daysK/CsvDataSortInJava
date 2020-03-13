@@ -4,7 +4,7 @@ public class Option{
 		option = args;
 		
 		if(option.equals("-help")){
-			System.out.println("�A�v���P�[�V�����uCSVsort�v�́ACSV�`���̃t�@�C�����̏�����̓L�[�����ɕ��בւ��Č��ʂ�\�����܂��B\n");
+			System.out.println("アプリケーション「CSVsort」は、CSV形式のファイル内の情報を入力キーを元に並べ替えて結果を表示します。\n");
 		}else{
 			System.exit(0);
 		}
@@ -12,5 +12,4 @@ public class Option{
 	}
 	
 }
-
 

@@ -1,13 +1,13 @@
 /*
- * Scanner���o�����������C���ɏ��������Ȃ��̂ŕ����������\�b�h
- * Scanner��trycatch�����ق����������ȂƎv���܂������Ӗ��͂Ȃ���������Ȃ�
+ * Scannerを出す処理をメインに書きたくないので分割したメソッド
+ * Scannerをtrycatchしたほうがいいかなと思いましたが意味はないかもしれない
  */
 import java.util.Scanner;
 
 public class Input{
     
-    // ���[�U�̓��͂��󂯕t���܂��B��ȗp�r�͕��ёւ��鍀�ڂ̔���ł��B
-    // �ėp�����������Ȃ̂Ő������ώ��ɂ��Ă���܂�
+    // ユーザの入力を受け付けます。主な用途は並び替える項目の判定です。
+    // 汎用性が高そうなので数字を可変式にしてあります
 	public static int checkInt(int maxNum){
 		int check = -1;
 		
@@ -16,18 +16,18 @@ public class Input{
 			check = scanner.nextInt();
 		}catch(Exception e){
 			e.printStackTrace();
-			throw new IllegalArgumentException("���͓��e���s���ł�");
+			throw new IllegalArgumentException("入力内容が不正です");
 		}
 		
 		if(0 <= check && check <= maxNum){
 			return check;
 		}else{
-			throw new IllegalArgumentException("���͓��e���s���ł�");
+			throw new IllegalArgumentException("入力内容が不正です");
 		}
 	}
     
-    // �����A�~���𔻒肵�܂�
-    // true�Ȃ珸���Afalse�Ȃ�~���Ƃ��Ď�舵���Ă��������B
+    // 昇順、降順を判定します
+    // trueなら昇順、falseなら降順として取り扱ってください。
 	public static boolean checkBoolean(){
 		int check = -1;
 		
@@ -36,7 +36,7 @@ public class Input{
 			check = scanner.nextInt();
 		}catch(Exception e){
 			e.printStackTrace();
-			throw new IllegalArgumentException("���͓��e���s���ł�");
+			throw new IllegalArgumentException("入力内容が不正です");
 		}
 		
 		if(check == 0){
@@ -44,7 +44,7 @@ public class Input{
 		}else if(check == 1){
 			return false;
 		}else{
-			throw new IllegalArgumentException("���͓��e���s���ł�");
+			throw new IllegalArgumentException("入力内容が不正です");
 		}
 	}
 }
