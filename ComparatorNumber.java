@@ -1,7 +1,7 @@
 import java.util.Comparator;
 
-/* �\�[�g���s�̂��߂̔�r�����̃��\�b�h
- * ���k�ԍ���
+/* ソート実行のための比較部分のメソッド
+ * 生徒番号編
  * 
  */
 public class ComparatorNumber implements Comparator<Student>{
