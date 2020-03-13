@@ -1,6 +1,11 @@
-/*
- * Scannerを出す処理をメインに書きたくないので分割したメソッド
- * Scannerをtrycatchしたほうがいいかなと思いましたが意味はないかもしれない
+/**
+ *  Inputクラスです。checkInt checkBoolean の二つのメソッドがあります。
+ *
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/13
+ *  ユーザーからの入力を受け付ける処理はすべてここに集めています。
+ *  Scannerを出す処理をメインに書きたくないので分割しました。
+ *  入力項目のチェックも行っています。
  */
 import java.util.Scanner;
 
