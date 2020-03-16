@@ -1,9 +1,20 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader
+import java.io.FileReader
+import java.io.File
 
-/* CSVファイルの読み込みと書き出しを行うクラス
- * ソート部分はwriteメソッドの中にあります。
- * 
+import java.util.Collections
+import java.util.ArrayList
+import java.util.List
+
+/**
+ *  WorkFile クラス　
+ *  read() と write() メソッドがあります
+ *
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/16
+ *  read()はCsvファイルの中のデータを読み込んでStudentリストの形にします。
+ *  write()はユーザの入力どおりにリストをソートしてその結果を画面に出力します。
+ *  csvファイル形式に出力するためにwrite()からwrite.csv()にリストを渡しています。
  */
 public class WorkFile{
     public static List<Student> read(){
