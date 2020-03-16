@@ -1,6 +1,15 @@
-/*
- * Studentクラスの定義
- * 
+/**
+ *  Studentを定義するクラスです。
+ *  getter, setterを定義しています。
+ *  toString()は画面表示フォーマットのため変更してありますので注意してください。
+ *
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/16
+ *  number：生徒番号
+ *  name  ：名前
+ *  team  ：所属クラス。適切な英単語がClassでありjavaで使うには少々ややこしかったためteamとしました。
+ *  age   ：年齢
+ *  score ：点数
  */
 public class Student{
     private String number;
@@ -48,7 +57,9 @@ public class Student{
         int nameLength = nihongo.length();
         return String.format("%-"+(length-nameLength)+"s", nihongo);
     }
-    
+
+    // 画面には下記のような形で出力されます。
+    // "0001"  "ほげ　ふが"        "Ａ"     2歳  100点
     public String toString(){
         String formatstr = String.format(FORMAT_NUMBER, this.number);
         
