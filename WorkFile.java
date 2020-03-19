@@ -1,11 +1,12 @@
-import java.io.BufferedReader
-import java.io.FileReader
-import java.io.File
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
-import java.util.Collections
-import java.util.ArrayList
-import java.util.List
-
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
 /**
  *  WorkFile クラス　
  *  read() と write() メソッドがあります
@@ -20,10 +21,19 @@ public class WorkFile{
     public static List<Student> read(){
         File inputfile = new File("Test.csv");
         List<Student> studentList = new ArrayList<Student>();
+        String charset = "UTF-8";
         
-        try(BufferedReader readFile = new BufferedReader(new FileReader(inputfile))){
+        // try-wifh-resouceの中でファイルを読み込む際の宣言をしています。
+        // UTF-8で読み込むためにInputStreamを使っています。 
+        try(
+            FileInputStream fi = new FileInputStream(inputfile);
+            InputStreamReader is = new InputStreamReader(fi,charset);
+            BufferedReader readFile = new BufferedReader(is);
+            ){
             String line; 
             
+            // １行ずつ読み込んで処理していきます。
+            // 空欄になったらループが終わります。
             while((line = readFile.readLine()) != null){
                 StringTokenizer st = new StringTokenizer(line);
                 Student john = new Student();
