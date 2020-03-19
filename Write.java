@@ -1,8 +1,19 @@
-import java.io.*;
-import java.util.*;
+import java.io.FileWriter;
+import java.io.FileReader;
+import java.io.File;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
 
-/* CSVファイルを出力するメソッド
+import java.util.List;
+import java.util.StringTokenizer;
+/**
+ *  Writeクラス。メソッドはcsv()のみ
  * 
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/16
+ *  カンマ区切りでデータを記入しています。
+ *  ファイルネームとリストはWorkfile.write()から引き渡された
+ *  ソート済みのリストと定義済みの名前を使用しています。
  */
 public class Write{
     public static void csv(String filename, List<Student> studentList){

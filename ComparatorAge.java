@@ -1,8 +1,12 @@
 import java.util.Comparator;
 
-/* ソート実行のための比較部分のメソッド
- * 年齢編
+/**
+ *  ComparatorAgeクラス
  * 
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/16
+ *  Collections.sort()を使うための前提条件となるメソッド。
+ *  Age（年齢）を評価しています。
  */
 public class ComparatorAge implements Comparator<Student>{
     public int compare (Student number1, Student number2){

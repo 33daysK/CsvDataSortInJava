@@ -1,18 +1,39 @@
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
 
-/* CSVファイルの読み込みと書き出しを行うクラス
- * ソート部分はwriteメソッドの中にあります。
- * 
+import java.util.Collections;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.StringTokenizer;
+/**
+ *  WorkFile クラス　
+ *  read() と write() メソッドがあります
+ *
+ *  @auther:33daysK
+ *  @version バージョン1.0 2020/03/16
+ *  read()はCsvファイルの中のデータを読み込んでStudentリストの形にします。
+ *  write()はユーザの入力どおりにリストをソートしてその結果を画面に出力します。
+ *  csvファイル形式に出力するためにwrite()からwrite.csv()にリストを渡しています。
  */
 public class WorkFile{
     public static List<Student> read(){
         File inputfile = new File("Test.csv");
         List<Student> studentList = new ArrayList<Student>();
+        String charset = "UTF-8";
         
-        try(BufferedReader readFile = new BufferedReader(new FileReader(inputfile))){
+        // try-wifh-resouceの中でファイルを読み込む際の宣言をしています。
+        // UTF-8で読み込むためにInputStreamを使っています。 
+        try(
+            FileInputStream fi = new FileInputStream(inputfile);
+            InputStreamReader is = new InputStreamReader(fi,charset);
+            BufferedReader readFile = new BufferedReader(is);
+            ){
             String line; 
             
+            // １行ずつ読み込んで処理していきます。
+            // 空欄になったらループが終わります。
             while((line = readFile.readLine()) != null){
                 StringTokenizer st = new StringTokenizer(line);
                 Student john = new Student();
