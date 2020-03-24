@@ -1,3 +1,7 @@
+package file;
+
+import data.Student;
+
 import java.io.FileWriter;
 import java.io.FileReader;
 import java.io.File;
@@ -10,13 +14,14 @@ import java.util.StringTokenizer;
  *  Writeクラス。メソッドはcsv()のみ
  * 
  *  @auther:33daysK
- *  @version バージョン1.0 2020/03/16
- *  カンマ区切りでデータを記入しています。
- *  ファイルネームとリストはWorkfile.write()から引き渡された
+ *  @version バージョン1.1 2020/03/24
+ *  カンマ区切りでデータをファイルに記入しています。
+ *  ファイルネームとリストはsort.SortListから引き渡された
  *  ソート済みのリストと定義済みの名前を使用しています。
  */
 public class Write{
     public static void csv(String filename, List<Student> studentList){
+        // sortListから引き渡されたファイル名に.csvを追加しています。
         String csvName = filename + ".csv";
         
         try(FileWriter writefile = new FileWriter(csvName, false);
@@ -28,7 +33,7 @@ public class Write{
                     pw.print(pen.getTeam() + ",");
                     pw.print(pen.getAge() + ",");
                     pw.print(pen.getScore() + ",");
-                    pw.println();
+                    pw.println(); // 改行の挿入
                 }
                 
         }catch(Exception e){

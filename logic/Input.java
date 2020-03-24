@@ -1,3 +1,5 @@
+package logic;
+
 /**
  *  Inputクラスです。checkInt checkBoolean の二つのメソッドがあります。
  *

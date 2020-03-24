@@ -1,10 +1,20 @@
+package main;
+
+import data.Student;
+import logic.Input;
+import sort.SortList;
+import file.Read;
+
+import java.util.List;
+
 /**  
  *  ここがメインクラスです。
  *  
  *  @auther:33daysK
- *  @version バージョン1.0 2020/03/13
+ *  @version バージョン1.1 2020/03/24
  *  ユーザがソート方法を選んで、読み込んだデータをソートします。
  *  ソートしたデータはCSV形式ファイルと画面に出力します。
+ *  決まった引数付で起動するとオプションを表示します。
  *  メイン部分はなるべく簡潔にしたかったのでほとんどの操作はほかのクラスが担当しています。
  */
 import java.util.List;
@@ -27,9 +37,9 @@ public class CsvSort{
 		
 		// この出力文字列の間のスペースはデータをそろえるためのものです。
 		// 少々強引ですがいい方法を思いつきませんでした。
-		List<Student> studentList = WorkFile.read();
+		List<Student> studentList = Read.csv();
 	    System.out.println(" 番号     名前             クラス   年齢   点数");
-		WorkFile.write(selectItem,isAscending,studentList);
+		SortList.student(selectItem,isAscending,studentList);
 		
 	}
 }
