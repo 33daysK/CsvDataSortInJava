@@ -1,10 +1,14 @@
+package sort;
+
+import data.Student;
+
 import java.util.Comparator;
 
 /**
  *  ComparatorAgeクラス
  * 
  *  @auther:33daysK
- *  @version バージョン1.0 2020/03/16
+ *  @version バージョン1.1 2020/03/24
  *  Collections.sort()を使うための前提条件となるメソッド。
  *  Score（点数）を評価しています。
  */

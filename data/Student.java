@@ -1,10 +1,12 @@
+package data;
+
 /**
  *  Studentを定義するクラスです。
  *  getter, setterを定義しています。
  *  toString()は画面表示フォーマットのため変更してありますので注意してください。
  *
  *  @auther:33daysK
- *  @version バージョン1.0 2020/03/16
+ *  @version バージョン1.1 2020/03/24
  *  number：生徒番号
  *  name  ：名前
  *  team  ：所属クラス。適切な英単語がClassでありjavaで使うには少々ややこしかったためteamとしました。
