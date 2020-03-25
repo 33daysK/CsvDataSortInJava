@@ -19,8 +19,6 @@ public class Student{
     private String team;
     private int age;
     private int score;
-    final String FORMAT_NUMBER = "%-8s";
-    final String FORMAT_OTHER = "%-5s %3d歳 %4d点";
     
     public String getNumber(){
         return this.number;
@@ -55,20 +53,20 @@ public class Student{
     }
     // 日本語が混じるとフォーマットできないため対策のメソッド
     // 空白を文字数分上下させて吸収しています
-    private static String formatName(String nihongo, int length){
-        int nameLength = nihongo.length();
-        return String.format("%-"+(length-nameLength)+"s", nihongo);
+    private static String formatName(int length, String beforeName){
+        int nameLength = beforeName.length();
+        return String.format("%-"+(length-nameLength)+"s", beforeName);
     }
 
     // 画面には下記のような形で出力されます。
     // "0001"  "ほげ　ふが"        "Ａ"     2歳  100点
     public String toString(){
-        String formatstr = String.format(FORMAT_NUMBER, this.number);
+        String formatstr = String.format("%-8s", this.number);
         
         // 名前対策
-        formatstr += formatName(this.name, 22);
+        formatstr += formatName(22, this.name);
         
-        formatstr += String.format(FORMAT_OTHER, this.team, this.age, this.score);
+        formatstr += String.format("%-5s %3d歳 %4d点", this.team, this.age, this.score);
         return formatstr;
     }
 }
