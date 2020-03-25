@@ -10,7 +10,7 @@ import java.util.List;
  *  student() メソッドがあります
  *
  *  @auther:33daysK
- *  @version バージョン1.0 2020/03/24
+ *  @version バージョン1.1 2020/03/25
  *  与えられたソート番号を元に場合わけを行い、リストをソートします。
  *  ソートしたリストはfile.Write.csv()に引き渡されて出力されます。
  *  Switch文をここに集めてほかのメソッドの場合わけを減らしています。
@@ -32,9 +32,6 @@ public class SortList{
                 Collections.reverse(studentList);
                 fileName = "番号降順";
             }
-            for (Student s : studentList) {
-                System.out.println(s);
-            }
             break;
         case 1:
             Collections.sort(studentList, new ComparatorTeam());
@@ -42,9 +39,6 @@ public class SortList{
             if(!(trueAscending)){
                 Collections.reverse(studentList);
                 fileName = "クラス降順";
-            }
-            for (Student s : studentList) {
-                System.out.println(s);
             }
             break;
         case 2:
@@ -54,9 +48,6 @@ public class SortList{
                 Collections.reverse(studentList);
                 fileName = "年齢降順";
             }
-            for (Student s : studentList) {
-                System.out.println(s);
-            }
             break;
         default:
             Collections.sort(studentList, new ComparatorScore());
@@ -65,9 +56,11 @@ public class SortList{
                 Collections.reverse(studentList);
                 fileName = "年齢降順";
             }
-            for (Student s : studentList) {
+        }
+
+        // switch文の中でソートされたリストを画面に出力します。
+        for (Student s : studentList) {
                 System.out.println(s);
-            }
         }
         Write.csv(fileName, studentList);
 
