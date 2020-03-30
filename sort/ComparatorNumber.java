@@ -6,7 +6,7 @@ import java.util.Comparator;
 /**
  *  ComparatorAgeクラス
  * 
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.1 2020/03/24
  *  Collections.sort()を使うための前提条件となるメソッド。
  *  Number（番号）を評価しています。

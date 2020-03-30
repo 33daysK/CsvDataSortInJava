@@ -9,7 +9,7 @@ import java.util.List;
  *  SortList クラス　
  *  student() メソッドがあります
  *
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.1 2020/03/25
  *  与えられたソート番号を元に場合わけを行い、リストをソートします。
  *  ソートしたリストはfile.Write.csv()に引き渡されて出力されます。

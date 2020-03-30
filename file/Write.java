@@ -13,7 +13,7 @@ import java.util.StringTokenizer;
 /**
  *  Writeクラス。メソッドはcsv()のみ
  * 
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.1 2020/03/24
  *  カンマ区切りでデータをファイルに記入しています。
  *  ファイルネームとリストはsort.SortListから引き渡された
