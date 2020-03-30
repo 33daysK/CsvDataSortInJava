@@ -14,7 +14,7 @@ import java.util.StringTokenizer;
  *  read クラス　
  *  csv() メソッドがあります
  *
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.1 2020/03/24
  *  read()はCsvファイルの中のデータを読み込んでStudentリストの形にします。
  *  write()はユーザの入力どおりにリストをソートしてその結果を画面に出力します。

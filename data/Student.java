@@ -5,7 +5,7 @@ package data;
  *  getter, setterを定義しています。
  *  toString()は画面表示フォーマットのため変更してありますので注意してください。
  *
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.1 2020/03/24
  *  number：生徒番号
  *  name  ：名前

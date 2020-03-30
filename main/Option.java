@@ -3,7 +3,7 @@ package main;
 /**
  *  オプションを表示するクラスです。
  *
- *  @auther:33daysK
+ *  @author:33daysK
  *  @version バージョン1.0 2020/03/13
  *  if else とswitchならどちらのほうが機能追加が楽か迷いましたが
  *  どちらでもそう大して変わらないだろうと思ったので使い慣れたif else にしました。
